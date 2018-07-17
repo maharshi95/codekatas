@@ -24,20 +24,19 @@ public class DistanceCityBFS {
     	int[] dist = new int[A.length];
     	int[] ans = new int[A.length-1];
     	ArrayList<ArrayList<Integer>> G = new ArrayList<ArrayList<Integer>>(A.length);
-    	for (int i = 0; i < A.length; i++) {
-    		G.add(new ArrayList<Integer>());
-    	}
+		for (int aA : A) {
+			G.add(new ArrayList<Integer>());
+		}
     	for (int i = 0; i < A.length; i++) {
     	   if (A[i] == i) {
     		   cp = i;
-    		   continue;
-    	   } else {
+		   } else {
     		   G.get(i).add(A[i]);
     		   G.get(A[i]).add(i);
     		   vis[i] = 0;
     	   }  
     	}
-    	LinkedList<Integer> q = new LinkedList<Integer>();
+    	LinkedList<Integer> q = new LinkedList<>();
     	q.add(cp);
     	vis[cp] = 1;
     	dist[cp] = 0;

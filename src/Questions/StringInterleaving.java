@@ -19,7 +19,7 @@ public class StringInterleaving {
             }
         }
         int ans = isInterleaveTopDown(dp, s1, s2, s3, s1.length(), s2.length());
-        return (ans == 1) ? true : false;
+        return ans == 1;
     }
 
     public int isInterleaveTopDown(int[][] dp, String s1, String s2, String s3, int i, int j) {

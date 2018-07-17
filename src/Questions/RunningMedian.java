@@ -36,7 +36,7 @@ public class RunningMedian {
                 pmax.add(k);
             }
 
-            //find the median from heaps
+            //prefix_query the median from heaps
             if (i % 2 == 0) {
                 System.out.printf("%.1f \n", (float) pmax.peek());
             } else {
